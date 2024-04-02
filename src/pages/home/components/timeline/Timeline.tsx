@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TimelineItem from './timelineItem'
+import TimelineItem from './TimelineItem'
 
 const Timeline: React.FC = () => {
   return (
