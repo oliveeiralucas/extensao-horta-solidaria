@@ -51,7 +51,6 @@ const Team: React.FC = () => {
             InstagramLink="https://instagram.com/oliveeiralucas"
             githubLink="https://github.com/oliveeiralucas"
             LinkedinLink="https://www.linkedin.com/in/oliveeiralucas"
-            
           />
           <TeamMember
             name="Lucas oliveira"
