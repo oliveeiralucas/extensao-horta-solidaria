@@ -94,18 +94,25 @@ const Navbar: React.FC = () => {
               <NavLink to={'/'}>
                 <div className="flex items-center justify-center gap-1">
                   <BiLeaf className="text-3xl text-green-600" />
-                  <h2 className="text-2xl font-bold text-black">
+                  <h2 className="text-xl font-bold text-black">
                     Horta Solidária
                   </h2>
                 </div>
               </NavLink>
             </div>
-            <div onClick={toggleMenu}>
-              {menuOpen ? (
-                <BiX className="text-2xl text-black" />
-              ) : (
-                <BiMenu className="text-2xl text-black" />
-              )}
+            {/* search icon */}
+            {/* hamburguer icon */}
+            <div className="flex items-center gap-3">
+              <button className="rounded-full focus:outline-none	">
+                <BiSearchAlt2 className="text-lg text-black" />
+              </button>
+              <div onClick={toggleMenu}>
+                {menuOpen ? (
+                  <BiX className="text-2xl text-black" />
+                ) : (
+                  <BiMenu className="text-2xl text-black" />
+                )}
+              </div>
             </div>
           </header>
           {menuOpen ? (
@@ -135,6 +142,14 @@ const Navbar: React.FC = () => {
               >
                 Atividades
               </NavLink>
+              <div className="flex gap-2 px-2">
+                <NavLink to={'/newsletter'}>
+                  <button className="flex items-center gap-1 rounded-full border bg-green-600 px-5 py-2.5 text-base font-semibold text-white">
+                    <BiBell />
+                    Novidades
+                  </button>
+                </NavLink>
+              </div>
             </div>
           ) : null}
         </>

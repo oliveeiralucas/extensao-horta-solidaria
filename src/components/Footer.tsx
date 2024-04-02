@@ -5,12 +5,11 @@ import {
   BiLogoGithub,
   BiLogoInstagram
 } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
 
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="relative bg-green-400">
+      <div className="relative bg-gray-100">
         <svg
           className="absolute top-0 -mt-5 h-6 w-full text-gray-100 sm:-mt-10 sm:h-16"
           preserveAspectRatio="none"
@@ -21,7 +20,7 @@ const Footer: React.FC = () => {
             d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
           />
         </svg>
-        <footer className="divide-y px-4 dark:bg-gray-100 dark:text-gray-800">
+        <footer className="divide-y bg-gray-100 px-4 text-gray-800">
           <div className="container mx-auto flex flex-col justify-between space-y-8 py-10 lg:flex-row lg:space-y-0">
             <div className="mb-6 flex items-center gap-1 text-2xl font-semibold md:mb-0">
               <BiLeaf />
