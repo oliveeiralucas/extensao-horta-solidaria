@@ -48,12 +48,19 @@ const Team: React.FC = () => {
             role="FrontEnd Development in Exactus"
             description="Futuro desenvolvedor e estudante de engenharia de software na UniFil em Londrina."
             avatarSrc="https://avatars.githubusercontent.com/u/124714081?v=4"
+            InstagramLink="https://instagram.com/oliveeiralucas"
+            githubLink="https://github.com/oliveeiralucas"
+            LinkedinLink="https://www.linkedin.com/in/oliveeiralucas"
+            
           />
           <TeamMember
             name="Lucas oliveira"
             role="FrontEnd Development in Exactus"
             description="Futuro desenvolvedor e estudante de engenharia de software na UniFil em Londrina."
             avatarSrc="https://avatars.githubusercontent.com/u/124714081?v=4"
+            InstagramLink="https://instagram.com/oliveeiralucas"
+            githubLink="https://github.com/oliveeiralucas"
+            LinkedinLink="https://www.linkedin.com/in/oliveeiralucas"
           />
         </div>
       </div>
