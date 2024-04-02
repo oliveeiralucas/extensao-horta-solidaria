@@ -12,7 +12,7 @@ import FeatureCard from './FeatureCard'
 
 const FeatureDisplay: React.FC = () => {
   return (
-    <section className="w-full bg-gray-100 p-5 md:p-20">
+    <section className="w-full bg-white p-5 md:p-20">
       <div className="mb-8 text-center lg:mb-16">
         <h2 className="mb-4 text-xl font-bold tracking-tight text-gray-900 md:text-4xl">
           Facilitando a Jardinagem Comunitária com Tecnologia
