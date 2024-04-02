@@ -4,7 +4,7 @@ import TeamMember from './TeamMember'
 
 const Team: React.FC = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-gray-100">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
         <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
           <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
