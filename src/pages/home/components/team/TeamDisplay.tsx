@@ -43,18 +43,6 @@ const Team: React.FC = () => {
             githubLink="https://github.com/p1nheiros"
             LinkedinLink="https://www.linkedin.com/in/pinheiros-dev"
           />
-          <TeamMember
-            name="Lucas oliveira"
-            role="FrontEnd Development in Exactus"
-            description="Futuro desenvolvedor e estudante de engenharia de software na UniFil em Londrina."
-            avatarSrc="https://avatars.githubusercontent.com/u/124714081?v=4"
-          />
-          <TeamMember
-            name="Lucas oliveira"
-            role="FrontEnd Development in Exactus"
-            description="Futuro desenvolvedor e estudante de engenharia de software na UniFil em Londrina."
-            avatarSrc="https://avatars.githubusercontent.com/u/124714081?v=4"
-          />
         </div>
       </div>
     </section>

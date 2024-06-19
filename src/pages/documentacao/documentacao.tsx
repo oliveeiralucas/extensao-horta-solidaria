@@ -169,8 +169,8 @@ const Documentacao: React.FC = () => {
                 Caso de uso
               </h4>
               <p className="mb-10 leading-6 text-gray-500">
-                Our comprehensive guide will equip you with the tools and
-                insights needed to..
+                Descreve interações entre usuários e sistema para alcançar um
+                objetivo.
               </p>
               <a
                 href="javascript:;"
