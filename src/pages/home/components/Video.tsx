@@ -16,7 +16,7 @@ const Video: React.FC = () => {
             title="Vídeo Institucional"
             width="100%"
             height="400"
-            src="https://www.youtube.com/embed/KpcRwfvsy3s?si=5vdpCRLLxNuP4LVD"
+            src="https://www.youtube.com/embed/1keuldcqybg"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
