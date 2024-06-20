@@ -136,6 +136,14 @@ const Navbar: React.FC = () => {
                 Projeto de extensão
               </NavLink>
               <NavLink
+                to={'/documentacao'}
+                className={`mx-5 text-lg font-semibold text-gray-500 ${
+                  active.pathname === '/documentacao' ? ActiveStyle : ''
+                }`}
+              >
+                Documentação
+              </NavLink>
+              <NavLink
                 to={'/atividades'}
                 className={`mx-5 text-lg font-semibold text-gray-500 ${
                   active.pathname === '/atividades' ? ActiveStyle : ''

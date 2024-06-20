@@ -117,7 +117,7 @@ const Documentacao: React.FC = () => {
                 processo.
               </p>
               <a
-                href="/digrama sequencia.png"
+                href="/diagrama sequencia.png"
                 className="cursor-pointer text-lg font-semibold text-green-600"
                 download
               >
