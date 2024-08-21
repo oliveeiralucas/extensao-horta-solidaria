@@ -20,10 +20,9 @@ const Team: React.FC = () => {
             name="Lucas rezende de sales"
             role="Tech Lead"
             description="entusiasta da programação web"
-            avatarSrc="https://instagram.fldb3-1.fna.fbcdn.net/v/t51.2885-19/446507623_1599517657570338_3727376333824142227_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fldb3-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=9QhH3Rv28HEQ7kNvgHadpdr&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AYClJV3Tm6D071GdKgOcaIkxmtRRlT13uaZO-Tgl_w30Fg&oe=667952A8&_nc_sid=8b3546"
+            avatarSrc="rezende-selfie.png"
             InstagramLink="https://www.instagram.com/lucas.rezendes_/"
-            githubLink="https://github.com/junior-slv"
-            LinkedinLink="https://www.linkedin.com/in/djuniors/"
+            githubLink="https://github.com/LucasRezendeUnifill"
           />
           <TeamMember
             name="Lucas oliveira"

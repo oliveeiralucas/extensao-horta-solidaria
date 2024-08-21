@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery: React.FC = () => {
   return (
-    <section className="bg-gray-100 pt-10">
+    <section className="w-full bg-white pt-10">
       <div className="mb-8 text-center">
         <h2 className="mb-4 text-xl font-bold tracking-tight text-gray-900 md:text-4xl">
           Galeria de imagens

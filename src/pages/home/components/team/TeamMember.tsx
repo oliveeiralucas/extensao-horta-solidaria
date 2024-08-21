@@ -9,7 +9,7 @@ interface TeamMemberProps {
   avatarSrc: string
   githubLink: string
   InstagramLink: string
-  LinkedinLink: string
+  LinkedinLink?: string
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -25,7 +25,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     <div className="flex flex-col items-center justify-center rounded-lg bg-gray-200 text-center shadow-md">
       <div>
         <img
-          className="mt-6 max-h-32 w-full rounded-full"
+          className="mt-6 max-h-32 rounded-full"
           src={avatarSrc}
           alt={name + ' Avatar'}
         />
@@ -47,16 +47,18 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               <AiFillGithub className="size-5" />
             </Link>
           </li>
-          <li>
-            <Link
-              to={LinkedinLink}
-              className="text-gray-500 hover:text-gray-900"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillLinkedin className="size-5" />
-            </Link>
-          </li>
+          {LinkedinLink && (
+            <li>
+              <Link
+                to={LinkedinLink ?? ''}
+                className="text-gray-500 hover:text-gray-900"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin className="size-5" />
+              </Link>
+            </li>
+          )}
           <li>
             <Link
               to={InstagramLink}

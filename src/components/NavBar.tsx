@@ -68,12 +68,6 @@ const Navbar: React.FC = () => {
               >
                 <li>Documentação</li>
               </NavLink>
-              <NavLink
-                to={'/atividades'}
-                className={active.pathname === '/atividades' ? ActiveStyle : ''}
-              >
-                <li>Atividades</li>
-              </NavLink>
             </>
           </nav>
           {/* pesquisa + fique por dentro das novidades */}
@@ -142,14 +136,6 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 Documentação
-              </NavLink>
-              <NavLink
-                to={'/atividades'}
-                className={`mx-5 text-lg font-semibold text-gray-500 ${
-                  active.pathname === '/atividades' ? ActiveStyle : ''
-                }`}
-              >
-                Atividades
               </NavLink>
             </div>
           ) : null}
