@@ -70,19 +70,21 @@ const Navbar: React.FC = () => {
               </NavLink>
             </>
           </nav>
-          {/* pesquisa + fique por dentro das novidades */}
+          {/* login + fique por dentro das novidades */}
           <div className="flex items-center gap-4">
-            <button
-              type="submit"
-              className="rounded-full border-[0.5px] border-gray-400 p-2 outline outline-offset-1 outline-green-600 focus:outline-none	"
-            >
-              <BiSearchAlt2 className="text-xl text-gray-500" />
-            </button>
             <div className="flex gap-2">
               <NavLink to={'/newsletter'}>
                 <button className="flex items-center gap-1 rounded-full border bg-green-600 px-5 py-2.5 text-base font-semibold text-white">
                   <BiBell />
                   Novidades
+                </button>
+              </NavLink>
+            </div>
+            <div className="flex gap-2">
+              <NavLink to={'/login'}>
+                <button className="flex items-center gap-1 rounded-full border bg-green-600 px-5 py-2.5 text-base font-semibold text-white">
+                  <BiBell />
+                  Acessar plataforma
                 </button>
               </NavLink>
             </div>

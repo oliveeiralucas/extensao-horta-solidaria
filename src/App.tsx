@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Navbar from './components/NavBar'
 import Documentacao from './pages/documentacao/documentacao'
 import HomePage from './pages/home/HomePage'
+import Login from './pages/Login/Login'
 import ProjetoExtensao from './pages/projetoExtensao/ProjetoExtensao'
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/projeto-de-extensao" element={<ProjetoExtensao />} />
             <Route path="/documentacao" element={<Documentacao />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </div>
