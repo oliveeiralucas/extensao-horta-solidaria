@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BiBell, BiLeaf, BiMenu, BiSearchAlt2, BiX } from 'react-icons/bi'
+import { BiBell, BiLeaf, BiLogIn, BiMenu, BiX } from 'react-icons/bi'
 import { NavLink, useLocation } from 'react-router-dom'
 
 const Navbar: React.FC = () => {
@@ -82,8 +82,8 @@ const Navbar: React.FC = () => {
             </div>
             <div className="flex gap-2">
               <NavLink to={'/login'}>
-                <button className="flex items-center gap-1 rounded-full border bg-green-600 px-5 py-2.5 text-base font-semibold text-white">
-                  <BiBell />
+                <button className="flex items-center gap-1 rounded-full border bg-yellow-600 px-5 py-2.5 text-base font-semibold text-white">
+                  <BiLogIn />
                   Acessar plataforma
                 </button>
               </NavLink>
@@ -138,6 +138,14 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 Documentação
+              </NavLink>{' '}
+              <NavLink
+                to={'/login'}
+                className={`mx-5 text-lg font-semibold text-gray-500 ${
+                  active.pathname === '/login' ? ActiveStyle : ''
+                }`}
+              >
+                Acessar plataforma
               </NavLink>
             </div>
           ) : null}
