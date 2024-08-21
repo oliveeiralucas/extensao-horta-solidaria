@@ -70,18 +70,16 @@ const Footer: React.FC = () => {
                 </h3>
                 <ul className="space-y-1">
                   <li>
-                    <a rel="noopener noreferrer" href="#">
+                    <a
+                      rel="noopener noreferrer"
+                      href="https://github.com/oliveeiralucas/extensao-horta-solidaria"
+                    >
                       Github
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener noreferrer" href="#">
+                    <a rel="noopener noreferrer" href="/documentacao">
                       Documentação
-                    </a>
-                  </li>
-                  <li>
-                    <a rel="noopener noreferrer" href="#">
-                      Figma
                     </a>
                   </li>
                 </ul>

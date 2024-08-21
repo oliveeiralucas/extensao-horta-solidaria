@@ -173,7 +173,7 @@ const Documentacao: React.FC = () => {
                 objetivo.
               </p>
               <a
-                href="javascript:;"
+                href="caso-de-uso.png"
                 className="cursor-pointer text-lg font-semibold text-green-600"
                 download
               >
