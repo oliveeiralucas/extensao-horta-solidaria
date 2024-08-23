@@ -23,7 +23,9 @@ const Login: React.FC = () => {
           <div className="mb-8 text-center">
             <div className="mb-3 flex items-center justify-center gap-1">
               <BiLeaf className="text-3xl text-green-600" />
-              <h2 className="text-2xl font-bold text-black">Horta Solidária</h2>
+              <a href="/" className="text-2xl font-bold text-black">
+                Horta Solidária
+              </a>
             </div>
             <h2 className="mb-2 text-2xl font-bold">Acesse já sua conta!</h2>
             <p className="text-gray-500">

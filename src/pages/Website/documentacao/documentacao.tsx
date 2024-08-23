@@ -181,6 +181,33 @@ const Documentacao: React.FC = () => {
               </a>
             </div>
           </div>
+          <div className="group w-full rounded-2xl border border-gray-300 max-lg:max-w-xl lg:w-1/3">
+            <div className="flex items-center">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1400/1*pSyPHIIzSGwyPo-HkhCkhg.png"
+                alt="blogs tailwind section"
+                className="w-full rounded-t-2xl"
+              />
+            </div>
+            <div className="rounded-b-2xl p-4 transition-all duration-300 group-hover:bg-gray-50 lg:p-6">
+              <span className="mb-3 block font-medium text-green-600">
+                aug 23, 2024
+              </span>
+              <h4 className="mb-5 text-xl font-medium leading-8 text-gray-900">
+                Modelagem DB
+              </h4>
+              <p className="mb-10 leading-6 text-gray-500">
+                Descreve como o banco de dados será formulado
+              </p>
+              <a
+                href="Database Scheme.pdf"
+                className="cursor-pointer text-lg font-semibold text-green-600"
+                download
+              >
+                Baixar..
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

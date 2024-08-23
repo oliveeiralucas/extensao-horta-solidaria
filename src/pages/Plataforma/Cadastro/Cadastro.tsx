@@ -47,7 +47,7 @@ const Cadastro: React.FC = () => {
 
   return (
     <div className="flex h-screen items-center justify-center bg-green-600 font-sans">
-      <div className="flex w-full max-w-5xl overflow-hidden rounded-lg bg-white shadow-lg">
+      <div className="m-10 flex w-full max-w-5xl overflow-hidden rounded-lg bg-white shadow-lg">
         <img
           className="flex w-1/2 bg-cover bg-center object-cover"
           src="regador.jpg"
@@ -57,7 +57,9 @@ const Cadastro: React.FC = () => {
           <div className="mb-8 text-center">
             <div className="mb-3 flex items-center justify-center gap-1">
               <BiLeaf className="text-3xl text-green-600" />
-              <h2 className="text-2xl font-bold text-black">Horta Solidária</h2>
+              <a href="/" className="text-2xl font-bold text-black">
+                Horta Solidária
+              </a>
             </div>
             <h2 className="mb-2 text-2xl font-bold">Crie sua conta!</h2>
             <p className="text-gray-500">

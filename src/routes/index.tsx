@@ -2,12 +2,13 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { WebSiteLayout } from '@/components/WebSiteLayout'
-import Page404 from '@/pages/assets/404'
-import Cadastro from '@/pages/Cadastro/Cadastro'
-import Documentacao from '@/pages/documentacao/documentacao'
-import HomePage from '@/pages/home/HomePage'
-import Login from '@/pages/Login/Login'
-import ProjetoExtensao from '@/pages/projetoExtensao/ProjetoExtensao'
+import Page404 from '@/Pages/assets/404'
+import Cadastro from '@/Pages/Plataforma/Cadastro/Cadastro'
+import Dashboard from '@/Pages/Plataforma/Dashboard/Dashboard'
+import Login from '@/Pages/Plataforma/Login/Login'
+import Documentacao from '@/Pages/Website/documentacao/documentacao'
+import HomePage from '@/Pages/Website/home/HomePage'
+import ProjetoExtensao from '@/Pages/Website/projetoExtensao/ProjetoExtensao'
 
 const AppRouter: React.FC = () => {
   return (
@@ -40,6 +41,7 @@ const AppRouter: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="*" element={<Page404 />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   )
