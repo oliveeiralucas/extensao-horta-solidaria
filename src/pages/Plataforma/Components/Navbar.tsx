@@ -3,7 +3,11 @@ import { FiBell, FiSearch } from 'react-icons/fi'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useLocation } from 'react-router-dom'
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  toggleSidebar: () => void
+}
+
+const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const location = useLocation()
@@ -41,7 +45,11 @@ const Navbar: React.FC = () => {
   return (
     <div className="sticky left-0 top-0 z-30 flex items-center justify-between bg-white px-6 py-4 shadow-md shadow-black/5">
       <div className="flex items-center">
-        <button type="button" className="text-xl text-gray-600">
+        <button
+          type="button"
+          className="text-xl text-gray-600"
+          onClick={toggleSidebar}
+        >
           <GiHamburgerMenu />
         </button>
         <ul className="ml-4 flex items-center text-lg">
@@ -83,13 +91,13 @@ const Navbar: React.FC = () => {
                 href="#"
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
               >
-                Settings
+                Configurações
               </a>
               <a
                 href="#"
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
               >
-                Profile
+                Perfil
               </a>
               <a
                 href="#"

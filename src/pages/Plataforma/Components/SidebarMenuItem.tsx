@@ -35,7 +35,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
         {item.subItems && (
           <IoIosArrowForward
             className={`ml-auto transition-transform${
-              isActive ? 'rotate-90' : ''
+              isActive ? 'rotate-90' : 'rotate-90'
             }`}
           />
         )}

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 
 import Navbar from '../Components/Navbar'
 import Sidebar from '../Components/Sidebar'
-import MainContent from './MainContent'
 
-const Dashboard: React.FC = () => {
+const CommonLayout: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 
   const toggleSidebar = () => {
@@ -20,10 +20,12 @@ const Dashboard: React.FC = () => {
       >
         <Sidebar isOpen={isSidebarOpen} />
         <Navbar toggleSidebar={toggleSidebar} />
-        <MainContent />
+        <div className="mx-4 bg-gray-100 p-6">
+          <Outlet />
+        </div>
       </main>
     </div>
   )
 }
 
-export default Dashboard
+export default CommonLayout

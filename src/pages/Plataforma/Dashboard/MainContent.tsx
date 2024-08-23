@@ -3,12 +3,10 @@ import React from 'react'
 import Card from './Card'
 import LineChart from './Chart'
 import DonationsTable from './DonationsTable'
-import Navbar from './Navbar'
 
 const MainContent: React.FC = () => {
   return (
-    <main className="min-h-screen w-full bg-gray-50 transition-all md:ml-72 md:w-[calc(100%-256px)]">
-      <Navbar />
+    <main className="min-h-screen w-full bg-gray-50 transition-all">
       <div className="mr-10 p-6">
         <div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1: Doações Realizadas */}

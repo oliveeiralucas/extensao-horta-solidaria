@@ -11,25 +11,32 @@ import { MenuItem } from '@/utils/types'
 import SidebarMenuItem from './SidebarMenuItem'
 
 const menuItems: MenuItem[] = [
-  { label: 'Dashboard', icon: RiHome2Line, link: '#' },
+  { label: 'Dashboard', icon: RiHome2Line, link: '/dashboard' },
   {
     label: 'Doações',
     icon: RiInstanceLine,
     link: '#',
-    subItems: [{ label: 'Realizar Doação', link: '#' }]
+    subItems: [
+      { label: 'Realizar Doação', link: '/doacao' },
+      { label: 'Doações Realizadas', link: '/doacoesRealizadas' }
+    ]
   },
   {
-    label: 'Settings',
+    label: 'Configurações',
     icon: RiSettings3Line,
     link: '#',
     subItems: [
       { label: 'Configurar Aplicação', link: '#' },
-      { label: 'Configurar Perfil', link: '#' }
+      { label: 'Configurar Perfil', link: '/configuracoes-perfil' }
     ]
   }
 ]
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  isOpen: boolean
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   const handleToggle = (index: number) => {
@@ -37,7 +44,11 @@ const Sidebar: React.FC = () => {
   }
 
   return (
-    <div className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col justify-between bg-gray-900 p-4">
+    <div
+      className={`fixed left-0 top-0 z-50 flex h-full w-72 flex-col justify-between bg-gray-900 p-4 transition-transform ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}
+    >
       <div>
         <a
           href="#"
@@ -71,7 +82,7 @@ const Sidebar: React.FC = () => {
               className="flex items-center rounded-md px-4 py-2 text-gray-300 hover:bg-gray-950 hover:text-gray-100"
             >
               <RiLogoutBoxRLine className="mr-3 text-2xl" />
-              <span className="text-lg">Signout</span>
+              <span className="text-lg">Sign out</span>
             </a>
           </li>
         </ul>
