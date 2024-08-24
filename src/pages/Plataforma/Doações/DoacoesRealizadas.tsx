@@ -70,7 +70,7 @@ const DonationsPage: React.FC = () => {
   }
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
     transactionId: number
   ) => {
     const { name, value } = e.target

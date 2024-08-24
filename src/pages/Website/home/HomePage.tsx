@@ -1,14 +1,13 @@
 import React from 'react'
 
-import FullscreenImage from '@/Pages/Website/home/FullScreenImage'
-import Team from '@/Pages/Website/home/team/TeamDisplay'
-
 import FeatureDisplay from './feature/FeatureDisplay'
+import FullscreenImage from './FullScreenImage'
 import Gallery from './Gallery'
 import HortaSolidariaInformations from './HortaSolidariaInformations'
 import Justify from './Justify'
 import Mission from './Mission'
 import Sponsors from './Sponsors'
+import Team from './team/TeamDisplay'
 import Timeline from './timeline/Timeline'
 import Video from './Video'
 
