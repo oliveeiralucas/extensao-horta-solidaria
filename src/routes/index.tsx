@@ -14,6 +14,7 @@ import SettingsLayout from '@/Pages/Plataforma/Settings/Settings'
 import Documentacao from '@/Pages/Website/documentacao/documentacao'
 import HomePage from '@/Pages/Website/home/HomePage'
 import ProjetoExtensao from '@/Pages/Website/projetoExtensao/ProjetoExtensao'
+import SiteOptions from '@/Pages/Plataforma/Settings/SiteOptions'
 
 const AppRouter: React.FC = () => {
   return (
@@ -53,6 +54,7 @@ const AppRouter: React.FC = () => {
         </Route>
         <Route path="/" element={<SettingsLayout />}>
           <Route path="configuracoes-perfil" element={<ProfileSettings />} />
+          <Route path="configuracoes-site" element={<SiteOptions />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -26,8 +26,8 @@ const menuItems: MenuItem[] = [
     icon: RiSettings3Line,
     link: '#',
     subItems: [
-      { label: 'Configurar Aplicação', link: '#' },
-      { label: 'Configurar Perfil', link: '/configuracoes-perfil' }
+      { label: 'Configurar Aplicação', link: '/configuracoes-site' },
+      { label: 'Configurar Perfil', link: '/configuracoes-perfil' },
     ]
   }
 ]
