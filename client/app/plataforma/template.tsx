@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import Sidebar from './components/Sidebar'
-import Navbar from './components/Navbar'
+import Sidebar from '../../components/plataforma/Sidebar'
+import Navbar from '../../components/plataforma/Navbar'
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)

@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconType } from 'react-icons'
 import { IoIosArrowForward } from 'react-icons/io'
-import { MenuItem } from '../../../lib/utils'
+import { MenuItem } from '../../lib/utils'
 
 interface SidebarMenuItemProps {
   item: MenuItem

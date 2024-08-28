@@ -18,7 +18,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./app/*"]
+      "@/*": ["./app/*"],
+      "@root/*": ["./*"]
     },
     "forceConsistentCasingInFileNames": true
   },
@@ -27,14 +28,14 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/site/home/fullScreenImage.tsx",
-    "app/site/home/gallery.tsx",
+    "components/site/home/fullScreenImage.tsx",
+    "components/site/home/gallery.tsx",
     "app/site/page.tsx",
-    "app/site/home/informations.tsx",
-    "app/site/home/justify.tsx",
-    "app/site/home/mission.tsx",
-    "app/site/home/sponsors.tsx",
-    "app/site/home/video.tsx"
+    "components/site/home/informations.tsx",
+    "components/site/home/justify.tsx",
+    "components/site/home/mission.tsx",
+    "components/site/home/sponsors.tsx",
+    "components/site/home/video.tsx"
   ],
   "exclude": ["node_modules"]
 }

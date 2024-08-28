@@ -7,7 +7,7 @@ import {
 } from 'react-icons/ri'
 
 import SidebarMenuItem from './SidebarMenuItem'
-import { MenuItem } from '../../../lib/utils'
+import { MenuItem } from '../../lib/utils'
 
 const menuItems: MenuItem[] = [
   { label: 'Dashboard', icon: RiHome2Line, link: '/plataforma/dashboard' },

@@ -1,8 +1,8 @@
 import React from 'react'
 
-import DonationsTable from './donations'
-import Card from './card'
-import LineChart from './chart'
+import DonationsTable from '../../../components/plataforma/dashboard/donations'
+import Card from '../../../components/plataforma/dashboard/card'
+import LineChart from '../../../components/plataforma/dashboard/chart'
 
 const MainContent: React.FC = () => {
   return (
