@@ -11,13 +11,13 @@ export const publicRoutes = ['/']
  * Essas rotas farão o redirecionamento para o dashboard
  * @type {string[]}
  */
-export const authRoutes = ['/auth/login', '/auth/cadastro']
+export const authRoutes = ['/auth/login', '/auth/cadastro', '/auth/error']
 
 /*
  * Rota principal para a autenticação da aplicação
  * Rotas que começam com esse prefixo são utilizadas para a autenticação da api
  * @type {string}
-*/
+ */
 export const apiAuthPrefix = '/api/auth'
 
 /**

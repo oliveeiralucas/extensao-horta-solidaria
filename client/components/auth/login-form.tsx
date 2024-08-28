@@ -16,8 +16,15 @@ import {
 } from '@root/components/ui/form'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { useSearchParams } from 'next/navigation'
 
 export const LoginForm = () => {
+  const searchParams = useSearchParams()
+  const urlError =
+    searchParams.get('error') === 'OAuthAccountNotLinked'
+      ? 'Tente realizar login com outro provedor'
+      : ''
+
   const [error, setError] = useState<string | undefined>('')
   const [isPending, startTransition] = useTransition()
 
@@ -34,7 +41,8 @@ export const LoginForm = () => {
     setError('')
     startTransition(() => {
       login(values).then((data) => {
-        setError(data?.error ?? undefined)
+        //TODO: adicionar quando fizer o 2FA (mensagem de sucesso)
+        setError(data?.error)
       })
     })
   }
@@ -85,7 +93,7 @@ export const LoginForm = () => {
               )}
             />
           </div>
-          <FormError message={error} />
+          <FormError message={error || urlError} />
           <Button type="submit" className="w-full">
             Login
           </Button>
