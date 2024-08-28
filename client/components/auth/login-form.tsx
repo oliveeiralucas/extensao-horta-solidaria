@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginSchema } from '@root/schemas'
 import { FormError } from '@root/components/form-error'
-import { FormSuccess } from '@root/components/form-success'
 import { login } from '@root/actions/login'
 import { useState, useTransition } from 'react'
 import {
@@ -20,7 +19,6 @@ import { Button } from '../ui/button'
 
 export const LoginForm = () => {
   const [error, setError] = useState<string | undefined>('')
-  const [success, setSuccess] = useState<string | undefined>('')
   const [isPending, startTransition] = useTransition()
 
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -34,11 +32,9 @@ export const LoginForm = () => {
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
     console.log(values)
     setError('')
-    setSuccess('')
     startTransition(() => {
       login(values).then((data) => {
-        setError(data.error)
-        setSuccess(data.success)
+        setError(data?.error ?? undefined)
       })
     })
   }
@@ -90,7 +86,6 @@ export const LoginForm = () => {
             />
           </div>
           <FormError message={error} />
-          <FormSuccess message={success} />
           <Button type="submit" className="w-full">
             Login
           </Button>

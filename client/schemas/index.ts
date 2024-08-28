@@ -16,5 +16,5 @@ export const RegisterSchema = z.object({
     message: 'Email obrigatório'
   }),
   password: z.string().min(6, { message: 'Senha muito fraca' }),
-  name: z.string().min(6, { message: 'Nome obrigatório' })
+  name: z.string({ message: 'Nome obrigatório' })
 })

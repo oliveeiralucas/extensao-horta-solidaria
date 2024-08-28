@@ -18,27 +18,25 @@ export default auth((req) => {
   const isPublicRoute = publicRoutes.includes(nextUrl.pathname)
   const isAuthRoute = authRoutes.includes(nextUrl.pathname)
 
-  if (isApiAuthRoute) {
-    return null
-  }
+  if (isApiAuthRoute) return undefined
 
   if (isAuthRoute) {
     if (isLoggedIn) {
       return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))
     }
-    return null
+    return undefined
   }
 
   if (!isLoggedIn && !isPublicRoute) {
-    return Response.redirect(new URL('/autenticacao/login', nextUrl))
+    return Response.redirect(new URL('/auth/login', nextUrl))
   }
 
-  return null
+  return undefined
 })
 
 export const config = {
   matcher: [
-    '/((?!.+\\.[\\w]+$|_next|site).*)', // Exclui as rotas que começam com `/site`
+    '/((?!.+\\.[\\w]+$|_next|site).*)', // Exclui as rotas que começam com `/site` mas inclui todas as outras
     '/',
     '/(api|trpc)(.*)'
   ]
