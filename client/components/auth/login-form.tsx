@@ -17,6 +17,7 @@ import {
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { useSearchParams } from 'next/navigation'
+import { FormSuccess } from '../form-success'
 
 export const LoginForm = () => {
   const searchParams = useSearchParams()
@@ -26,6 +27,7 @@ export const LoginForm = () => {
       : ''
 
   const [error, setError] = useState<string | undefined>('')
+  const [success, setSuccess] = useState<string | undefined>('')
   const [isPending, startTransition] = useTransition()
 
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -39,10 +41,12 @@ export const LoginForm = () => {
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
     console.log(values)
     setError('')
+    setSuccess('')
     startTransition(() => {
       login(values).then((data) => {
         //TODO: adicionar quando fizer o 2FA (mensagem de sucesso)
         setError(data?.error)
+        setSuccess(data?.success)
       })
     })
   }
@@ -94,6 +98,7 @@ export const LoginForm = () => {
             />
           </div>
           <FormError message={error || urlError} />
+          <FormSuccess message={success} />
           <Button type="submit" className="w-full">
             Login
           </Button>
