@@ -18,3 +18,9 @@ export const RegisterSchema = z.object({
   password: z.string().min(6, { message: 'Senha muito fraca' }),
   name: z.string({ message: 'Nome obrigatório' })
 })
+
+export const ResetSchema = z.object({
+  email: z.string().email({
+    message: 'Email obrigatório'
+  })
+})

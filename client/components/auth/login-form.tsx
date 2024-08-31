@@ -1,3 +1,4 @@
+'use client'
 import * as z from 'zod'
 import { CardWrapper } from './card-wrapper'
 import { useForm } from 'react-hook-form'
@@ -18,6 +19,7 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { useSearchParams } from 'next/navigation'
 import { FormSuccess } from '../form-success'
+import Link from 'next/link'
 
 export const LoginForm = () => {
   const searchParams = useSearchParams()
@@ -39,7 +41,6 @@ export const LoginForm = () => {
   })
 
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
-    console.log(values)
     setError('')
     setSuccess('')
     startTransition(() => {
@@ -92,6 +93,14 @@ export const LoginForm = () => {
                       disabled={isPending}
                     />
                   </FormControl>
+                  <Button
+                    size="sm"
+                    variant="link"
+                    asChild
+                    className="px-0 font-normal"
+                  >
+                    <Link href="/auth/reset">Esqueceu a senha?</Link>
+                  </Button>
                   <FormMessage />
                 </FormItem>
               )}

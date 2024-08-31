@@ -11,7 +11,12 @@ export const publicRoutes = ['/', '/auth/new-verification']
  * Essas rotas farão o redirecionamento para o dashboard
  * @type {string[]}
  */
-export const authRoutes = ['/auth/login', '/auth/register', '/auth/error']
+export const authRoutes = [
+  '/auth/login',
+  '/auth/register',
+  '/auth/error',
+  '/auth/reset'
+]
 
 /*
  * Rota principal para a autenticação da aplicação
