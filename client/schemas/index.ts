@@ -24,3 +24,9 @@ export const ResetSchema = z.object({
     message: 'Email obrigatório'
   })
 })
+
+export const NewPasswordSchema = z.object({
+  password: z.string().min(6, {
+    message: "Senha muito fraca"
+  })
+})
