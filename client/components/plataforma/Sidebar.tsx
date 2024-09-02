@@ -9,6 +9,7 @@ import {
 
 import SidebarMenuItem from './SidebarMenuItem'
 import { MenuItem } from '../../lib/utils'
+import { LogoutButton } from '../auth/logout-button'
 
 const menuItems: MenuItem[] = [
   { label: 'Dashboard', icon: RiHome2Line, link: '/plataforma/dashboard' },
@@ -83,14 +84,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
       </div>
       <div>
         <ul>
-          <li>
-            <a
-              href="#"
-              className="flex items-center rounded-md px-4 py-2 text-gray-300 hover:bg-gray-950 hover:text-gray-100"
-            >
+          <li className="flex items-center rounded-md px-4 py-2 text-gray-300 hover:bg-gray-950 hover:text-gray-100">
+            <LogoutButton>
               <RiLogoutBoxRLine className="mr-3 text-2xl" />
               <span className="text-lg">Sign out</span>
-            </a>
+            </LogoutButton>
           </li>
         </ul>
       </div>
