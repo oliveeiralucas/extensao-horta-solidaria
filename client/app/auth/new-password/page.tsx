@@ -1,10 +1,11 @@
 import { NewPasswordForm } from '@root/components/auth/new-password-form'
+import { Suspense } from 'react'
 
 const NewPassword = () => {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <NewPasswordForm />
-    </div>
+    </Suspense>
   )
 }
 

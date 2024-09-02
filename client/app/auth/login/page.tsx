@@ -1,11 +1,13 @@
 'use client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { LoginForm } from '@root/components/auth/login-form'
 
-
 const Login: React.FC = () => {
-
-  return <LoginForm />
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginForm />
+    </Suspense>
+  )
 }
 
 export default Login
