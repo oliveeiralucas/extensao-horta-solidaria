@@ -4,7 +4,7 @@
  * @type {string[]}
  */
 
-export const publicRoutes = ['/', '/auth/new-verification']
+export const publicRoutes = ['/auth/new-verification']
 
 /*
  * Um array de rotas que são usadas para autenticação
