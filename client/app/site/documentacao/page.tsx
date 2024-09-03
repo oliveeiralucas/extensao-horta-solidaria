@@ -173,7 +173,7 @@ const Documentacao: React.FC = () => {
                 objetivo.
               </p>
               <a
-                href="caso-de-uso.png"
+                href="/caso-de-uso.png"
                 className="cursor-pointer text-lg font-semibold text-green-600"
                 download
               >
@@ -200,7 +200,7 @@ const Documentacao: React.FC = () => {
                 Descreve como o banco de dados será formulado
               </p>
               <a
-                href="Database Scheme.pdf"
+                href="/Database Scheme.pdf"
                 className="cursor-pointer text-lg font-semibold text-green-600"
                 download
               >
