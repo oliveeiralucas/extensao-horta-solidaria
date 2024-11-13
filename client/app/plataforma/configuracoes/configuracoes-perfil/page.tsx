@@ -29,7 +29,7 @@ const ProfileSettings: React.FC = () => {
     currentPassword: '',
     newPassword: '',
     confirmPassword: '',
-    company: 'ProCrew',
+    company: 'apucarana',
     joinDate: '2024-08-23', // Data exemplo, deve ser obtida de dados reais
     rewardPointBalance: 100 // Pontos exemplo, deve ser obtido de dados reais
   })
@@ -59,7 +59,7 @@ const ProfileSettings: React.FC = () => {
         <div className="mb-6 flex items-center">
           <img
             src="https://via.placeholder.com/150" // Substitua pela URL real ou variável adequada
-            alt="Profile"
+            alt="Perfil"
             className="size-24 rounded-full object-cover"
           />
           <div className="ml-4">
@@ -67,13 +67,13 @@ const ProfileSettings: React.FC = () => {
               type="button"
               className="inline-flex justify-center rounded-xl border border-transparent bg-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-300 focus:outline-none"
             >
-              Upload New Photo
+              Inserir nova foto
             </button>
             <button
               type="button"
               className="ml-4 inline-flex justify-center rounded-xl border border-transparent bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus:outline-none"
             >
-              Delete
+              Deletar
             </button>
           </div>
         </div>
@@ -84,7 +84,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700"
             >
-              First Name
+              Nome
             </label>
             <input
               type="text"
@@ -100,7 +100,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700"
             >
-              Last Name
+              Sobrenome
             </label>
             <input
               type="text"
@@ -119,7 +119,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="userName"
               className="block text-sm font-medium text-gray-700"
             >
-              User Name
+              Usuário
             </label>
             <input
               type="text"
@@ -135,7 +135,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              Email Address
+              Endereço de email
             </label>
             <input
               type="email"
@@ -155,7 +155,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="phoneNumber"
               className="block text-sm font-medium text-gray-700"
             >
-              Phone Number
+              Número de telefone
             </label>
             <input
               type="tel"
@@ -171,7 +171,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="location"
               className="block text-sm font-medium text-gray-700"
             >
-              Location
+              Endereço
             </label>
             <input
               type="text"
@@ -190,7 +190,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="timeZone"
               className="block text-sm font-medium text-gray-700"
             >
-              Time Zone
+              Fuso horário
             </label>
             <input
               type="text"
@@ -204,57 +204,57 @@ const ProfileSettings: React.FC = () => {
           <div className="grid grid-cols-3 gap-6">
             <div>
               <label className="block text-sm font-medium text-gray-700">
-                Company
+                Local
               </label>
               <div className="mt-2 flex items-center">
                 <input
                   type="radio"
-                  id="proCrew"
+                  id="apucarana"
                   name="company"
-                  value="ProCrew"
-                  checked={formData.company === 'ProCrew'}
+                  value="Apucarana"
+                  checked={formData.company === 'Apucarana'}
                   onChange={handleChange}
                   className="size-4 border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 <label
-                  htmlFor="proCrew"
+                  htmlFor="apucarana"
                   className="ml-2 block text-sm text-gray-700"
                 >
-                  ProCrew
+                  Apucarana
                 </label>
               </div>
               <div className="mt-2 flex items-center">
                 <input
                   type="radio"
-                  id="noon"
+                  id="londrina"
                   name="company"
-                  value="Noon"
-                  checked={formData.company === 'Noon'}
+                  value="Londrina"
+                  checked={formData.company === 'Londrina'}
                   onChange={handleChange}
                   className="size-4 border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 <label
-                  htmlFor="noon"
+                  htmlFor="londrina"
                   className="ml-2 block text-sm text-gray-700"
                 >
-                  Noon
+                  Londrina
                 </label>
               </div>
               <div className="mt-2 flex items-center">
                 <input
                   type="radio"
-                  id="lamasaTech"
+                  id="cambe"
                   name="company"
-                  value="LamasaTech"
-                  checked={formData.company === 'LamasaTech'}
+                  value="Cambe"
+                  checked={formData.company === 'Cambe'}
                   onChange={handleChange}
                   className="size-4 border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 <label
-                  htmlFor="lamasaTech"
+                  htmlFor="cambe"
                   className="ml-2 block text-sm text-gray-700"
                 >
-                  LamasaTech
+                  Cambé
                 </label>
               </div>
             </div>
@@ -267,7 +267,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="currentPassword"
               className="block text-sm font-medium text-gray-700"
             >
-              Current Password
+              Senha atual
             </label>
             <input
               type="password"
@@ -286,7 +286,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="newPassword"
               className="block text-sm font-medium text-gray-700"
             >
-              New Password
+              Nova senha
             </label>
             <input
               type="password"
@@ -302,7 +302,7 @@ const ProfileSettings: React.FC = () => {
               htmlFor="confirmPassword"
               className="block text-sm font-medium text-gray-700"
             >
-              Confirm New Password
+              Confirme a nova senha
             </label>
             <input
               type="password"
@@ -320,7 +320,7 @@ const ProfileSettings: React.FC = () => {
             type="submit"
             className="inline-flex justify-center rounded-xl border border-transparent bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition duration-150 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            Save Changes
+            Salvar
           </button>
         </div>
       </form>

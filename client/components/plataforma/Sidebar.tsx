@@ -87,7 +87,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
           <li className="flex items-center rounded-md px-4 py-2 text-gray-300 hover:bg-gray-950 hover:text-gray-100">
             <LogoutButton>
               <RiLogoutBoxRLine className="mr-3 text-2xl" />
-              <span className="text-lg">Sign out</span>
+              <span className="text-lg">Deslogar</span>
             </LogoutButton>
           </li>
         </ul>
