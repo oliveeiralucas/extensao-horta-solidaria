@@ -27,13 +27,13 @@ const FullscreenImage: React.FC<FullscreenImageProps> = ({ imageUrl }) => {
               recursos
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="#">
+              <Link href="https://app-horta-solidaria.vercel.app/login">
                 <span className="rounded-md bg-yellow-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm cursor-pointer">
                   Conhecer Projeto
                 </span>
               </Link>
               <a
-                href="#"
+                href="mailto:suporte.horta.solidaria@gmail.com"
                 className="rounded-lg border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400"
               >
                 Entre em contato

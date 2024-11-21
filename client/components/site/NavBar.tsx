@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
       </div>
       {/* Navegação */}
       <nav className="inline-flex text-base gap-6 font-semibold text-gray-500">
-        <Link href="#">
+        <Link href="/site">
           Home
         </Link>
         <Link

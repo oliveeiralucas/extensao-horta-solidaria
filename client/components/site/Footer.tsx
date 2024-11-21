@@ -11,17 +11,12 @@ const Footer = () => {
           </span>
           <ul className="flex flex-wrap items-center mb-6 gap-6 text-sm font-medium text-gray-500 sm:mb-0">
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
+              <a href="/site/projeto-de-extensao" className="hover:underline me-4 md:me-6">
                 Sobre
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Política de Privacidade
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
+              <a href="mailto:suporte.horta.solidaria@gmail.com" className="hover:underline">
                 Contato
               </a>
             </li>
