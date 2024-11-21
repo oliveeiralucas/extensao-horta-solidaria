@@ -12,10 +12,8 @@ export const LoginButton = ({
   mode = 'redirect',
   asChild
 }: LoginButtonProps) => {
-  const router = useRouter()
-
   const onClick = () => {
-    router.push('/auth/login')
+    window.location.href = 'https://app-horta-solidaria.vercel.app/login'
   }
 
   if (mode === 'modal') {

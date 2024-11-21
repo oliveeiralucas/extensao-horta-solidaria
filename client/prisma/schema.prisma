@@ -1,95 +1,66 @@
+// prisma/schema.prisma
+datasource db {
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+enum UserRole {
+  ADMIN
+  USER
 }
 
-model donation_centre {
-  donation_center_id   Int                    @id @default(autoincrement())
-  name                 String                 @db.VarChar(255)
-  location             String?                @db.VarChar(255)
-  contact_info         String?                @db.VarChar(255)
-  operating_hours      String?                @db.VarChar(255)
-  accepted_categories  Json?                  @db.Json
-  capacity             Int?
-  current_needs        Json?                  @db.Json
-  donation_transaction donation_transaction[]
+model User {
+  id String @id @default(cuid())
+  name String?
+  email String? @unique
+  emailVerified DateTime?
+  image String?
+  password String?
+  role  UserRole @default(USER)
+  accounts Account[]
 }
 
-/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
-model donation_transaction {
-  transaction_id      Int                  @id @default(autoincrement())
-  user_id             Int?
-  donation_center_id  Int?
-  item_id             Int?
-  quantity_donated    Int
-  donation_date       DateTime?            @default(now()) @db.Timestamp(6)
-  status              String               @default("pending") @db.VarChar(20)
-  donation_centre     donation_centre?     @relation(fields: [donation_center_id], references: [donation_center_id], onDelete: NoAction, onUpdate: NoAction)
-  food_item_inventory food_item_inventory? @relation(fields: [item_id], references: [item_id], onDelete: NoAction, onUpdate: NoAction)
-  user_profile        user_profile?        @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction)
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @map("provider_account_id")
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String? @db.Text
+  session_state      String?
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
 }
 
-/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
-model educational_content {
-  content_id      Int       @id @default(autoincrement())
-  title           String    @db.VarChar(255)
-  type            String    @db.VarChar(20)
-  summary         String?
-  full_text       String?
-  publish_date    DateTime? @default(now()) @db.Timestamp(6)
-  relevant_topics Json?     @db.Json
+model VerificationToken {
+  id String @id @default(cuid())
+  email String
+  token String @unique
+  expires DateTime
+
+  @@unique([email, token])
+
 }
 
-/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
-model food_item_inventory {
-  item_id              Int                    @id @default(autoincrement())
-  user_id              Int?
-  name                 String                 @db.VarChar(255)
-  category             String?                @db.VarChar(100)
-  expiry_date          DateTime?              @db.Timestamp(6)
-  purchase_date        DateTime?              @db.Timestamp(6)
-  quantity             Int
-  storage_method       String?                @db.VarChar(100)
-  status               String                 @default("pending") @db.VarChar(20)
-  donation_transaction donation_transaction[]
-  user_profile         user_profile?          @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction)
-}
+model PasswordResetToken {
+  id String @id @default(cuid())
+  email String
+  token String @unique
+  expires DateTime
 
-model reward_catalog {
-  reward_id           Int       @id @default(autoincrement())
-  name                String    @db.VarChar(255)
-  description         String?
-  points_required     Int
-  availability_status Boolean?  @default(true)
-  expiry_date         DateTime? @db.Timestamp(6)
-}
-
-/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
-model system_notification {
-  notification_id Int           @id @default(autoincrement())
-  user_id         Int?
-  type            String        @db.VarChar(30)
-  message         String
-  full_text       String?
-  data_sent       DateTime?     @default(now()) @db.Timestamp(6)
-  status          String        @default("unread") @db.VarChar(20)
-  user_profile    user_profile? @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction)
-}
-
-model user_profile {
-  user_id              Int                    @id @default(autoincrement())
-  name                 String                 @db.VarChar(255)
-  email                String                 @unique @db.VarChar(255)
-  password             String                 @db.VarChar(255)
-  location             String?                @db.VarChar(255)
-  preferences          Json?                  @db.Json
-  join_date            DateTime?              @default(now()) @db.Timestamp(6)
-  reward_point_balance Int?                   @default(0)
-  donation_transaction donation_transaction[]
-  food_item_inventory  food_item_inventory[]
-  system_notification  system_notification[]
+  @@unique([email, token])
 }
